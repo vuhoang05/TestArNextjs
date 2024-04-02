@@ -1,0 +1,78 @@
+.newproduct {
+    align-items: center;
+    text-align: center;
+    font-family: "Brush Script MT",
+}
+
+.productGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Wrap items to fit multiple rows */
+    justify-content: center;
+    /* Center items horizontally */
+    margin: 20px auto;
+
+}
+
+
+
+.name {
+    font-size: 20px;
+}
+
+.price {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.productItem {
+    width: calc(28.33% - 10px);
+    margin: 100px 8px 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.productItem:hover {
+    border: 1px solid #ccc;
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+}
+
+.tryOnButton {
+    margin-top: 15px;
+}
+
+.tryOnLink:hover {
+    color: rgb(180, 122, 6);
+}
+
+.tryOnLink {
+
+    color: black;
+    font-size: 23px;
+
+}
+
+.button_pro_container {
+    display: flex;
+
+}
+
+
+.addtocart {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+    font-size: 23px;
+}
+
+.addtocart:hover {
+    color: rgb(180, 122, 6);
+    text-decoration: underline;
+    cursor: pointer;
+}

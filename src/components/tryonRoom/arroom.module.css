@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    /* Distributes elements evenly with margins */
+    width: calc(100vw - 200px);
+    /* Set container width with margins */
+    margin: 0 100px;
+    /* Add margins for spacing (adjust as needed) */
+    align-items: center;
+    /* Aligns content vertically within container */
+    text-align: center;
+    /* Center text if desired */
+    font-family: "Brush Script MT",
+        /* Ensure font family is set */
+}
+
+.gioithieu,
+.arroom_container {
+    width: 48%;
+    /* Consistent width for perfect balance */
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    border: 1px solid #ddd;
+    /* Optional border for visual separation */
+    padding: 10px;
+    /* Add padding for spacing within sections */
+}
+
+.image1,
+.image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    /* Scales images to fill containers while preserving proportions */
+}
+
+.text:hover {
+    color: rgb(180, 122, 6);
+}
+
+.text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    color: black;
+    font-size: 23px;
+
+}
+
+.text2 {
+    color: black;
+    font-size: 15px;
+
+}
+
+.text_container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
