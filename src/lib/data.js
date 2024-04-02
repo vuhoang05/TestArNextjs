@@ -40,7 +40,7 @@ export const Products =
             anh: "/lipimage/4.jpg",
             mau: "Cam",
             coAr: true,
-            maAr: "CamDatLip.deepar",
+            maAr: "cam.deepar",
             gia: 439000,
             phanLoai: "son kem lì"
         },
@@ -51,7 +51,7 @@ export const Products =
             anh: "/lipimage/5.jpg",
             mau: "Đỏ mận",
             coAr: true,
-            maAr: "sondo.deepar",
+            maAr: "doman.deepar",
             gia: 739000,
             phanLoai: "son kem lì"
         },

@@ -45,7 +45,7 @@ const LipstickAdjusterPage = () => {
             <div className={styles.lipstick_container}>
                 <div className={styles.top_bar}>
                     <Link href="/" className={styles.home} onClick={handleBackHome}>
-                        &lt;- BackHome
+                        &lt;- Trở lại
                     </Link>
                 </div>
                 <h1 className={styles.logo} onClick={"/"}>AuraLipstick Try-On</h1>

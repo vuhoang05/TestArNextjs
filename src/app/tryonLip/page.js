@@ -10,9 +10,9 @@ const effectList = [
     'CamDatLip.deepar',
     'honggachlip.deepar',
     'lipblack.deepar',
-    'sonxanhla.deepar',
-    'sonxanhla.deepar',
-    'sonxanhla.deepar',
+    'doman.deepar',
+    'cam.deepar',
+
 ];
 export default function LipstickAdjusterPage() {
     const [currentEffectIndex, setCurrentEffectIndex] = useState(0);
@@ -34,7 +34,7 @@ export default function LipstickAdjusterPage() {
                     }
                 };
             } catch (error) {
-                console.error('Lỗi khởi tạo DeepAR:', error);
+                console.er - ror('Lỗi khởi tạo DeepAR:', error);
             }
         }
 
@@ -57,7 +57,7 @@ export default function LipstickAdjusterPage() {
 
             <div className={styles.headerRow}>
                 <Link href="/" className={styles.backbutton} onClick={handleBackHome}>
-                    &lt;- BackHome
+                    &lt;- Trở lại
                 </Link>
             </div>
 
@@ -91,15 +91,13 @@ export default function LipstickAdjusterPage() {
             case 3:
                 return '#d34e58';
             case 4:
-                return '#D06754';
+                return 'black';
             case 5:
-                return '#D3362F';
+                return '#F85610';
 
             case 6:
-                return '#99173A';
+                return '#7D2B29';
 
-            case 7:
-                return '#EE596A';
 
             default:
                 return 'gray';

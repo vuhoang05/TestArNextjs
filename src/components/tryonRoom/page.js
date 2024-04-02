@@ -9,7 +9,7 @@ export default function ArRoom() {
                     <img className={styles.image1} src={"banner3.png"} />
                     <div className={styles.text_container}>
                         <a className={styles.text}>GIỚI THIỆU VỀ AURALIPSTICK</a>
-                        <a className={styles.text2}>Học cách trang điẻm với AuraLipStick </a>
+                        <a className={styles.text2}>Học cách trang điểm với AURALIPSTICK </a>
                         <a className={styles.text}>TÌM HIỂU</a>
                     </div>
                 </div>
