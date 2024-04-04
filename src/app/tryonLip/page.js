@@ -34,7 +34,7 @@ export default function LipstickAdjusterPage() {
                     }
                 };
             } catch (error) {
-                console.er - ror('Lỗi khởi tạo DeepAR:', error);
+                console.log('Lỗi khởi tạo DeepAR:', error);
             }
         }
 
@@ -44,11 +44,13 @@ export default function LipstickAdjusterPage() {
         await deepARInstance.switchEffect(effectList[newEffectIndex]);
         setCurrentEffectIndex(newEffectIndex);
     };
+
     const handleBackHome = () => {
-        if (deepARInstance.current) {
-            deepARInstance.current.destroy();
+        if (deepARInstanceRef.current) {
+            deepARInstanceRef.current.destroy();
         }
     };
+
     const onFocus = () => setActiveButton(0)
     const onBlur = () => setActiveButton(null)
     return (

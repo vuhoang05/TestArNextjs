@@ -22,7 +22,7 @@ const LipstickAdjusterPage = () => {
                     effect: maAr,
                 });
             } catch (error) {
-                console.error('Error initializing DeepAR:', error);
+                console.log('Error initializing DeepAR:', error);
             }
 
             return () => {
