@@ -1,17 +1,17 @@
 .container {
     display: flex;
     justify-content: space-between;
-    /* Distributes elements evenly with margins */
+
     width: calc(100vw - 200px);
-    /* Set container width with margins */
+
     margin: 0 100px;
-    /* Add margins for spacing (adjust as needed) */
+
     align-items: center;
-    /* Aligns content vertically within container */
+
     text-align: center;
-    /* Center text if desired */
+
     font-family: "Brush Script MT",
-        /* Ensure font family is set */
+
 }
 
 .gioithieu,

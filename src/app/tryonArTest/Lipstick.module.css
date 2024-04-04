@@ -14,7 +14,7 @@
     height: 100%;
     padding: 10px;
     position: absolute;
-    top: 50px;
+    top: 100px;
 
 }
 
@@ -33,10 +33,10 @@
 }
 
 .logo {
+    padding-top: 70px;
     font-size: 3rem;
     margin-bottom: 2rem;
     color: #ffffff;
-
     font-family: 'Arial', sans-serif;
 
 }

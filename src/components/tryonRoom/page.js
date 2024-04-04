@@ -18,7 +18,7 @@ export default function ArRoom() {
                     <div className={styles.text_container}>
                         <a className={styles.text}>TRẢI NGHIỆM PHÒNG SON AR </a>
                         <a className={styles.text2}>Tìm hiểu màu son phù hợp với bạn </a>
-                        <a className={styles.text}><Link className={styles.text} href={"/tryonLip"}>TRY-ON</Link> </a>
+                        <a className={styles.text}><Link className={styles.text} href={"/tryonLipRoom"}>TRY-ON</Link> </a>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,12 @@
 // layouts/NoHeaderFooterLayout.js
 import React from 'react';
 
-export default function NoHeaderFooterLayout({ children }) {
+const NoHeaderFooterLayout = ({ children }) => {
     return (
-        <html lang="en">
-            <body>
-                {children}
-            </body>
-        </html>
+        <div>
+            {children}
+        </div>
     );
-}
+};
+
+export default NoHeaderFooterLayout;

@@ -1,39 +1,57 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as deepar from 'deepar';
 import styles from '@/app/tryonArTest/Lipstick.module.css';
 import NoHeaderFooterLayout from '../layoutAr';
 import Link from 'next/link';
-const LipstickAdjusterPage = () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = parseInt(urlParams.get('productId'));
 
-    const ten = urlParams.get('ten');
-    const gia = urlParams.get('gia');
-    const maAr = urlParams.get('maAr');
+import { getProduct, getProducts } from '@/lib/data';
+
+const LipstickAdjusterPage = () => {
+
+    const [product, setProduct] = useState(null);
+
+    const [isDeepARInitialized, setIsDeepARInitialized] = useState(false);
+    useEffect(() => {
+        const fetchProduct = async () => {
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get('productId'));
+            const products = await getProducts();
+            const product = await getProduct(productId);
+            setProduct(product);
+
+            // setProduct((product) => { // Use callback function for product update
+            //     setMaAr(product["maAr"]);
+            //     return product; // Return the updated product for state
+            // });
+        };
+
+
+        fetchProduct();
+    }, []);
+
 
     useEffect(() => {
         const initDeepAR = async () => {
-            let deepARInstance = null;
-            try {
-                deepARInstance = await deepar.initialize({
-                    licenseKey: 'fa47526ac0fab455bb89c35bc076b008311a4225e7865b3a19f95803b64fe31a93e76f8b520473ce',
-                    previewElement: document.getElementById('deepar-preview'),
-                    effect: maAr,
-                });
-            } catch (error) {
-                console.log('Error initializing DeepAR:', error);
-            }
-
-            return () => {
-                if (deepARInstance) {
-                    deepARInstance.destroy();
+            if (!isDeepARInitialized && product) {
+                const maAr = `${product["maAr"]}`
+                try {
+                    const deepARInstance = await deepar.initialize({
+                        licenseKey: 'your_license_key',
+                        previewElement: document.getElementById('deepar-preview'),
+                        effect: maAr,
+                    });
+                    setIsDeepARInitialized(true);
+                } catch (error) {
+                    console.log('Error initializing DeepAR:', error);
                 }
-            };
+            }
         };
 
         initDeepAR();
-    }, []);
+    }, [product]);
+
 
     const handleBackHome = () => {
         if (deepARInstanceRef.current) {
@@ -43,17 +61,24 @@ const LipstickAdjusterPage = () => {
     return (
         <NoHeaderFooterLayout>
             <div className={styles.lipstick_container}>
+
+                <h1 className={styles.logo}>AuraLipstick Try-On</h1>
                 <div className={styles.top_bar}>
                     <Link href="/" className={styles.home} onClick={handleBackHome}>
+
                         &lt;- Trở lại
                     </Link>
                 </div>
-                <h1 className={styles.logo} onClick={"/"}>AuraLipstick Try-On</h1>
                 <div id="deepar-preview" className={styles.deepar_preview} />
-                <a className={styles.information}>{ten} - {gia}vnđ</a>
+                {product && ( // Check if product exists before accessing properties
+                    <a className={styles.information}>
+                        {product.ten} - {product.gia}vnđ
+                    </a>
+                )}
                 <h4 className={styles.buy}>THÊM VÀO GIỎ</h4>
             </div>
         </NoHeaderFooterLayout>
+
     );
 };
 

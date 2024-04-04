@@ -26,7 +26,10 @@ const DanhSachSanPham = async () => {
                             <div className={styles.tryOnButton}>
                                 <Link className={styles.tryOnLink} href={`/tryonArTest?productId=${product.id}&ten=${product.ten}&gia=${product.gia}&maAr=${product.maAr}`} onClick={() => handleTryOn(product.id)}>
                                     THỬ AR
+
                                 </Link>
+                                <img className={styles.imgAr} src="aricon.png" />
+
                             </div>
                         )}
                         <a className={styles.addtocart}>THÊM VÀO GIỎ</a>
