@@ -5,12 +5,12 @@ export default function Navbar() {
     return (
         <>
             <div className={styles.nav}>
-                <h1 className={styles.logo}>AuraLipStick</h1>
+                <h1 className={styles.logo}>AURALIPSTICK</h1>
                 <div className={styles.navLink}>
-                    <Link href={"/"}>Trang chủ</Link>
-                    <Link href={"/products"}>Son môi</Link>
-                    <Link href={"/"}>Giới thiệu</Link>
-                    <Link href={"/"}>Liên hệ</Link>
+                    <Link href={"/"}>TRANG CHỦ</Link>
+                    <Link href={"/products"}>SẢN PHẨM</Link>
+                    <Link href={"/"}>GIỚI THIỆU</Link>
+                    <Link href={"/"}>LIÊN HỆ</Link>
                     <Link href={"/"}><img className={styles.bagimage} src={"bag.jpg"} /></Link>
                 </div>
 

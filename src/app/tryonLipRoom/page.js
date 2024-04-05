@@ -2,16 +2,16 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import * as deepar from 'deepar';
-import styles from "@/app/tryonLip/Lipstick.module.css"
+import styles from "@/app/tryonLipRoom/Lipstick.module.css"
 import Link from 'next/link';
 const effectList = [
-    'sondo.deepar',
-    'hongsonlip.deepar',
-    'CamDatLip.deepar',
-    'honggachlip.deepar',
-    'lipblack.deepar',
-    'doman.deepar',
-    'cam.deepar',
+    '/lipAr/DoCam.deepar',
+    '/lipAr/Pink.deepar',
+    '/lipAr/Cam.deepar',
+    '/lipAr/DoMan.deepar',
+    '/lipAr/Berry.deepar',
+    '/lipAr/SonDen.deepar',
+
 
 ];
 export default function LipstickAdjusterPage() {
@@ -66,7 +66,7 @@ export default function LipstickAdjusterPage() {
             <div id="deepar-preview" className={styles.deepar_preview} />
 
             <div className={styles.effectLip}>
-                {Array(7).fill(null).map((_, index) => (
+                {Array(6).fill(null).map((_, index) => (
                     <button
                         key={index}
                         className={styles.button}
@@ -85,24 +85,17 @@ export default function LipstickAdjusterPage() {
     function getColorByIndex(index) {
         switch (index) {
             case 0:
-                return 'red';
+                return '#E03534 ';
             case 1:
-                return '#f809a1';
+                return '#F7A4B5 ';
             case 2:
-                return '#ce5a41';
+                return '#F85610 ';
             case 3:
-                return '#d34e58';
+                return '#7D2B29 ';
             case 4:
-                return 'black';
+                return '#C4608F';
             case 5:
-                return '#F85610';
-
-            case 6:
-                return '#7D2B29';
-
-
-            default:
-                return 'gray';
+                return 'black';
         }
     }
 

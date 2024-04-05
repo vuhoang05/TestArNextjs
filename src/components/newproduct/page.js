@@ -20,16 +20,14 @@ const DanhSachSanPham = async () => {
                 {products.map((product) => (
                     <div key={product.id} className={styles.productItem}>
                         <img src={product.anh} />
-                        <a className={styles.name}>{product.ten}</a>
-                        <a className={styles.price}>{product.gia}vnđ</a>
+                        <a className={styles.name} >{product.ten} </a>
+                        <a className={styles.price}>{product.gia}&nbsp;VNĐ</a>
                         {product.coAr && (
                             <div className={styles.tryOnButton}>
                                 <Link className={styles.tryOnLink} href={`/tryonArTest?productId=${product.id}&ten=${product.ten}&gia=${product.gia}&maAr=${product.maAr}`} onClick={() => handleTryOn(product.id)}>
                                     THỬ AR
-
                                 </Link>
                                 <img className={styles.imgAr} src="aricon.png" />
-
                             </div>
                         )}
                         <a className={styles.addtocart}>THÊM VÀO GIỎ</a>

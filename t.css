@@ -1,0 +1,62 @@
+/* CSS cho trang chi tiết sản phẩm */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-image {
+    float: left;
+    margin-right: 20px;
+}
+
+.product-image img {
+    width: 300px;
+}
+
+.product-info {
+    float: left;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.product-info p {
+    margin-bottom: 10px;
+}
+
+.product-info button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.product-description {
+    clear: both;
+    margin-top: 20px;
+}
+
+.product-description h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-description ul li {
+    margin-bottom: 10px;
+}
