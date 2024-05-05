@@ -38,7 +38,7 @@ const LipstickAdjusterPage = () => {
                 const maAr = `${product["maAr"]}`
                 try {
                     const deepARInstance = await deepar.initialize({
-                        licenseKey: 'your_license_key',
+                        licenseKey: 'fa47526ac0fab455bb89c35bc076b008311a4225e7865b3a19f95803b64fe31a93e76f8b520473ce',
                         previewElement: document.getElementById('deepar-preview'),
                         effect: maAr,
                     });
